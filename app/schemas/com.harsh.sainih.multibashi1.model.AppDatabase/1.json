@@ -1,0 +1,59 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "5d65f6c9deaa88f57ea226ed6655ca15",
+    "entities": [
+      {
+        "tableName": "Lesson",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`type` TEXT, `conceptName` TEXT, `pronunciation` TEXT, `targetScript` TEXT, `audio_url` TEXT, PRIMARY KEY(`type`, `conceptName`, `targetScript`))",
+        "fields": [
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "conceptName",
+            "columnName": "conceptName",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "pronunciation",
+            "columnName": "pronunciation",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "targetScript",
+            "columnName": "targetScript",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "audio_url",
+            "columnName": "audio_url",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "type",
+            "conceptName",
+            "targetScript"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"5d65f6c9deaa88f57ea226ed6655ca15\")"
+    ]
+  }
+}

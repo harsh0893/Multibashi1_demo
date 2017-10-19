@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Multibashi</string>
+    <string name="question">What is your name?</string>
+    <string name="kannada_string">ನಿನ್ನ ಹೆಸರೇನು</string>
+    <string name="kannada_in_english">Ninna hesarēnu</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="action_refresh">Refresh</string>
+</resources>
